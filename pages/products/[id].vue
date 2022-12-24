@@ -1,5 +1,5 @@
 <template>
-    <div class="flex flex-col justify-start items-center gap-3">
+    <div class="flex flex-col justify-start items-center gap-3 mt-[35px]">
         <div class="flex flex-col lg:flex-row lg:items-center justify-center items-stretch gap-3 max-w-[960px] p-4">
             <!-- product image -->
             <div class="flex flex-col items-center ">
@@ -67,10 +67,10 @@
             <div id="container" class="overflow-x-auto overflow-y-hidden">
                 <!-- products -->
                 <div @mouseenter="startAnimation(false)" @mouseleave="startAnimation(true)" ref="productsYouMayLike"
-                    class="flex justify-start px-2 items-center transition-all p-2">
+                    class="flex justify-start px-2 items-center p-2">
                     <!-- product -->
                     <div v-for="product in productsYouMayLike" :key="product.productName"
-                        class="flex flex-col item-center min-w-[135px] hover:scale-[1.1]">
+                        class="flex flex-col item-center min-w-[135px] hover:scale-[1.1] transition-all">
                         <NuxtLink :to="`/products/${product.slug.current}`">
                             <img :src="product.imageUrl"
                                 class="h-[130px] w-[130px] p-3 px-5 rounded-xl m-2 object-contain bg-slate-100" />

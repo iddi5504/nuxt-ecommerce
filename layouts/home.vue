@@ -1,7 +1,7 @@
 <template>
     <div class="">
         <!-- nav -->
-        <div class="flex w-full justify-between px-3 p-2">
+        <div class="flex w-full justify-between items-center p-1 px-3 fixed top-0 left-0 z-[14] bg-gray-100">
             <!-- logo -->
             <NuxtLink to="/products" class="text-lg text-slate-700 font-bold">iMarket</NuxtLink>
             <div @click="openCart" class="relative">

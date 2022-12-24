@@ -1,7 +1,8 @@
 <template>
     <div @mouseenter="hover(true)" @mouseleave="hover(false)"
-        class="flex flex-col items-start hover:scale-105 transition-all ease-in-out p-3 relative cursor-pointer">
-        <img :src="imageUrl" class="h-[220px] w-[220px] p-3 rounded-xl m-2 object-contain bg-slate-100" alt="">
+        class="flex flex-col items-start hover:scale-105 transition-all ease-in-out p-[10px] max-sm:w-full relative cursor-pointer">
+        <img :src="imageUrl"
+            class="w-full h-[300px]  sm:h-[220px] sm:w-[220px] p-3 rounded-xl object-contain bg-slate-200" alt="">
         <!-- description -->
         <NuxtLink :to="`/products/${id}`">
             <div class="flex flex-col items-start">

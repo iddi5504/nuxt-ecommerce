@@ -1,6 +1,6 @@
 <template>
     <transition name="show">
-        <div v-if="toast" class="w-full absolute top-3 left-0 flex justify-center items-center">
+        <div v-if="toast" class="w-full z-[100] fixed top-3 left-0 flex justify-center items-center">
             <!-- toast -->
             <div class="text-white bg-green-500 max-w-md break-words text-sm font-semibold p-2 rounded-md">
                 <div>{{ toast }}</div>

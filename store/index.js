@@ -8,7 +8,16 @@ export default defineStore('productStore', {
   }),
   actions: {
     addToCart(productItem) {
-      this.cart.push(productItem);
+      let isInCart = this.cart.find(item => {
+        return productItem.productName == item.productName
+      })
+      if (!isInCart) {
+        this.cart.push(productItem);
+      } else {
+
+        this.cart[this.cart.indexOf(isInCart)].numberOfItems += productItem.numberOfItems
+      }
+      // console.warn(isInCart)
     },
     decrease(item) {
       if (item.numberOfItems == 0) return

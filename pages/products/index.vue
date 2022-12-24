@@ -1,13 +1,13 @@
 <template>
     <div
-        class="text-[16px] max-h-screen text-slate-800 bg-slate-50 flex flex-col items-center justify-start px-2 lg:px-4 py-1 ">
+        class="text-[16px] mt-[45px] max-h-screen text-slate-800 bg-slate-50 flex flex-col items-center justify-start px-2 lg:px-4 py-1 ">
         <!-- hero banner -->
         <div class="w-full p-3 px-10  rounded-2xl bg-purple-500 flex flex-col justify-center lg:flex-row">
             <!-- text -->
             <div class="flex flex-col h-[274px] justify-start lg:justify-center gap-2 items-start 
-             p-2 z-20">
+             p-2 z-10">
                 <div class="text-lg">Earphone Pro</div>
-                <div class="text-2xl lg:text-6xl text-slate-800 font-bold break-words">{{ promo.promoName }}</div>
+                <div class="text-2xl lg:text-4xl text-slate-800 font-bold break-words">{{ promo.promoName }}</div>
                 <NuxtLink :to="`/products/${promoProductSlug}/`">
                     <button class="bg-slate-800 hover:bg-purple-400 text-white p-2 font-bold text-lg rounded-lg">Shop
                         now</button>
@@ -15,8 +15,9 @@
             </div>
             <!-- product image section -->
             <div class="flex flex-1 justify-end items-end relative">
-                <img :src="promo.mainImage" class="w-[250px] h-[250px] absolute lg:relative" alt="">
-                <div class="flex flex-col items-end break-words">
+                <img :src="promo.mainImage" class="w-[200px] lg:w-[250px] lg:h-[250px] h-[200px] absolute lg:relative"
+                    alt="">
+                <div class="flex flex-col w-[200px] lg:max-w-fit items-end break-words">
                     <div class="text-lg text-slate-900">Description</div>
                     <div class="text-sm text-slate-800 text-right">{{ promo.description }}</div>
                 </div>
@@ -30,7 +31,7 @@
                 <div class="text-lg text-slate-600 font-semibold text-center">dklsdklds
                     sdlk sdklds lksndds knldslkndsl kndsk lnkln</div>
             </div>
-            <div class="flex w-full space-x-2 justify-center items-center flex-wrap">
+            <div class="flex w-full justify-center items-center flex-wrap">
                 <product v-for="product in products" :key="product.key" :product="product" />
             </div>
         </div>
