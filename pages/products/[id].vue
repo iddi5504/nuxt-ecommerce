@@ -93,7 +93,8 @@ import PRODUCTSTORE from '../../store/index'
 
 const productStore = PRODUCTSTORE()
 definePageMeta({
-    layout: "home"
+    layout: "home",
+    middleware: 'auth'
 })
 
 export default {

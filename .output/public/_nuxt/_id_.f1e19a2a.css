@@ -1,0 +1,1 @@
+.selected{background:#9333ea}.animate{animation:animate 20s linear infinite}@keyframes animate{0%{transform:translate(-800px)}to{transform:translate(800px)}}.pause{animation-play-state:paused}#container::-webkit-scrollbar{display:none}#container::-webkit-scrollbar-track{background:transparent}#container::-webkit-scrollbar-thumb{background:#9333ea;border-radius:20px}
